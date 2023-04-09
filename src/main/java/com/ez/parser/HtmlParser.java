@@ -1,5 +1,6 @@
 package com.ez.parser;
 
+import com.ez.cdi.Html;
 import jodd.lagarto.EmptyTagVisitor;
 import jodd.lagarto.LagartoParser;
 
@@ -11,6 +12,7 @@ import java.util.List;
  * @author dpunosevac
  */
 @ApplicationScoped
+@Html
 public class HtmlParser implements Parser {
 
     @Override
@@ -19,9 +21,9 @@ public class HtmlParser implements Parser {
     }
 
     @Override
-    public List<String> parse(String input) {
+    public List<String> getTexts(String content) {
         var texts = new ArrayList<String>();
-        var parser = new LagartoParser(input);
+        var parser = new LagartoParser(content);
         var tagVisitor = new EmptyTagVisitor() {
             @Override
             public void text(final CharSequence text) {

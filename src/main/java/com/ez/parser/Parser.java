@@ -9,5 +9,5 @@ public interface Parser {
 
     ParserType getType();
 
-    List<String> parse(String input);
+    List<String> getTexts(String content);
 }

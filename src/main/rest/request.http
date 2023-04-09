@@ -1,0 +1,7 @@
+# Index the given content
+POST {{host}}/api/v1/index
+Content-Type: application/json
+
+{
+  "contentPath": "https://docs.rs/tokio/1.27.0/tokio/"
+}

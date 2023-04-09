@@ -1,12 +1,13 @@
 package com.ez.tokenization;
 
-import javax.enterprise.context.ApplicationScoped;
-
 /**
  * @author dpunosevac
  */
-@ApplicationScoped
 public class Lexer {
 
-
+    public static String tokenize(String text) {
+        // TODO: add stop words
+        // TODO: add stem
+        return text.trim().toLowerCase();
+    }
 }
